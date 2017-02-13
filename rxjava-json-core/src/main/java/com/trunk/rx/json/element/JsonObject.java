@@ -96,6 +96,10 @@ public class JsonObject<T extends JsonElement> extends JsonElement {
     return new JsonObject<>(this.elements, suppress);
   }
 
+  public Observable<Entry<T>> getElements() {
+    return elements;
+  }
+
   public static final class Entry<T extends JsonElement> {
 
     private String key;
